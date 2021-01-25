@@ -61,7 +61,7 @@ model = Model()
 # Construct our loss function and an Optimizer. The call to model.parameters()
 # in the SGD constructor will contain the learnable parameters of the two
 # nn.Linear modules which are members of the model.
-criterion = nn.BCELoss(reduction='sum')
+criterion = nn.BCELoss(reduction='mean')
 optimizer = optim.SGD(model.parameters(), lr=0.1)
 
 # Training loop
